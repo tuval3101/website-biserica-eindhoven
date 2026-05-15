@@ -1,5 +1,7 @@
 Despre Botez
-Dacă în familia voastră urmează să vină pe lume un copil, felicitări! Să vă trăiască și să se mântuiască! Vă recomand să citiți cu atenție rândurile de mai jos, ca să știți tot ce e cu adevărat important, din perspectiva Bisericii, în legătură cu botezul unui copil.
+
+Dacă în familia voastră urmează să vină pe lume un copil, felicitări! 
+Să vă trăiască și să se mântuiască! Vă recomand să citiți cu atenție rândurile de mai jos, ca să știți tot ce e cu adevărat important, din perspectiva Bisericii, în legătură cu botezul unui copil.
 
 Botezul – dacă trebuie să o mai spun – nu este nici „tradiție” populară, nici un „act magic”, nici un „drept” care ni s-ar cuveni în mod automat, ci reprezintă actul fundamental de intrare în Biserică și, ca urmare, trebuie primit cu respectul și înțelegerea cuvenite acestei Sfinte Taine a Bisericii.
 

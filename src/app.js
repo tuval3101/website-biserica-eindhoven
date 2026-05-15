@@ -12,7 +12,7 @@ const renderHeader = () => {
     <div class="top-strip">
       <div class="container top-strip__inner">
         <span>Adresă: ${siteConfig.address}</span>
-        <a href="mailto:${siteConfig.email}">Email: ${siteConfig.email}</a>
+        <a href="mailto:${siteConfig.email}" target="_blank" rel="noopener noreferrer">Email: ${siteConfig.email}</a>
         <a href="${siteConfig.phoneHref}">Telefon părinte: ${siteConfig.phone}</a>
       </div>
     </div>
@@ -302,7 +302,8 @@ const renderPage = async () => {
           <img src="${page.icon}" alt="" loading="lazy" decoding="async">
           <h2>Contact parohie</h2>
           <p>${siteConfig.address}</p>
-          <a class="button button--burgundy" href="/contact/">Contactează părintele</a>
+          <a class="button button--whatsapp" href="${siteConfig.whatsapp}" target="_blank" rel="noopener noreferrer">Contactează părintele</a>
+          <a class="button button--burgundy" href="mailto:${siteConfig.email}" target="_blank" rel="noopener noreferrer">Trimite email</a>
           <a class="button button--gold" href="${siteConfig.maps}" target="_blank" rel="noopener noreferrer">Vezi pe hartă</a>
         </aside>
         ${page.slug === "contact" ? renderWhatsAppQrCard() : ""}

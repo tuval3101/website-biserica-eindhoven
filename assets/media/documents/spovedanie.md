@@ -1,4 +1,5 @@
 Despre Spovedanie
+
 10 lucruri de știut înainte de, în timpul și după Spovedanie
 
 Spovedania este esenţială pentru orice creştin, botezat în numele Preasfintei Treimi. Prin Botez omul primeşte un veşmânt de lumină necreată, un înger păzitor şi un loc în rai, şi mai ales este înfiat de Dumnezeu, devine cetăţean al cerului şi casnic al lui Dumnezeu, fiu al lui Dumnezeu după har.
