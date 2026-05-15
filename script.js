@@ -51,16 +51,6 @@ const initNavigation = () => {
 
     primaryNav.addEventListener("click", (event) => {
       const link = event.target instanceof HTMLAnchorElement ? event.target : null;
-      const dropdownTrigger = link?.closest(".info-menu")?.querySelector(":scope > a");
-
-      if (link && link === dropdownTrigger) {
-        const dropdown = link.closest(".info-menu");
-        if (dropdown && window.matchMedia("(max-width: 1100px)").matches) {
-          event.preventDefault();
-          dropdown.classList.contains("is-open") ? closeDropdown(dropdown) : openDropdown(dropdown);
-        }
-        return;
-      }
 
       if (link) closeMenu();
     });
@@ -84,6 +74,17 @@ const initNavigation = () => {
   });
 
   document.addEventListener("click", (event) => {
+    if (
+      primaryNav?.classList.contains("is-open") &&
+      !event.target.closest(".primary-nav") &&
+      !event.target.closest(".nav-toggle")
+    ) {
+      navToggle?.setAttribute("aria-expanded", "false");
+      primaryNav.classList.remove("is-open");
+      document.body.classList.remove("nav-open");
+      closeAllDropdowns();
+    }
+
     if (!event.target.closest(".info-menu")) closeAllDropdowns();
   });
 };

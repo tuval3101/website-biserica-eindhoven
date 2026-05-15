@@ -76,6 +76,19 @@ const renderFooter = () => `
   </footer>
 `;
 
+const renderWhatsAppQrCard = () => `
+  <article class="whatsapp-qr-card">
+    <h2>Intră în grupul WhatsApp</h2>
+    <p>Scanează codul QR pentru a te adăuga în grupul WhatsApp al parohiei și pentru a primi anunțuri, program liturgic și informații importante.</p>
+    <figure class="whatsapp-qr-card__image">
+      <img src="/assets/images/spirituality/Grupwhatsapp.png" alt="Cod QR pentru grupul WhatsApp al Parohiei Sfânta Parascheva Eindhoven-Tilburg" loading="lazy" decoding="async">
+    </figure>
+    <p class="whatsapp-qr-card__subtext">Grupul este destinat anunțurilor comunității Parohiei „Sf. Parascheva de la Iași” Eindhoven–Tilburg.</p>
+    <!-- TODO: replace with real WhatsApp invite link when available -->
+    <a class="button button--whatsapp" href="#" target="_blank" rel="noopener noreferrer">Deschide WhatsApp</a>
+  </article>
+`;
+
 const setMeta = (page) => {
   document.title = page.seoTitle;
   document.documentElement.lang = "ro";
@@ -144,16 +157,6 @@ const initMenu = () => {
 
   primaryNav.addEventListener("click", (event) => {
     const link = event.target instanceof HTMLAnchorElement ? event.target : null;
-    const dropdownTrigger = link?.closest(".info-menu")?.querySelector(":scope > a");
-
-    if (link && link === dropdownTrigger) {
-      const dropdown = link.closest(".info-menu");
-      if (dropdown && window.matchMedia("(max-width: 1100px)").matches) {
-        event.preventDefault();
-        dropdown.classList.contains("is-open") ? closeDropdown(dropdown) : openDropdown(dropdown);
-      }
-      return;
-    }
 
     if (link) closeMenu();
   });
@@ -175,6 +178,17 @@ const initMenu = () => {
   });
 
   document.addEventListener("click", (event) => {
+    if (
+      primaryNav?.classList.contains("is-open") &&
+      !event.target.closest(".primary-nav") &&
+      !event.target.closest(".nav-toggle")
+    ) {
+      navToggle?.setAttribute("aria-expanded", "false");
+      primaryNav.classList.remove("is-open");
+      document.body.classList.remove("nav-open");
+      closeAllDropdowns();
+    }
+
     if (!event.target.closest(".info-menu")) closeAllDropdowns();
   });
 };
@@ -284,6 +298,7 @@ const renderPage = async () => {
           <a class="button button--burgundy" href="/contact/">Contactează părintele</a>
           <a class="button button--gold" href="${siteConfig.maps}" target="_blank" rel="noopener noreferrer">Vezi pe hartă</a>
         </aside>
+        ${page.slug === "contact" ? renderWhatsAppQrCard() : ""}
       </div>
     </section>
   `;

@@ -29,6 +29,7 @@ const requiredAssets = [
   "/assets/images/spirituality/Spovedanie.png",
   "/assets/images/spirituality/Donatii.png",
   "/assets/images/spirituality/Program.png",
+  "/assets/images/spirituality/Grupwhatsapp.png",
   "/assets/images/contact-location/St. Willibrord Church.png",
   "/assets/images/hero/Parohie 1.png",
   "/assets/images/hero/Parohie 2.png",
