@@ -32,7 +32,7 @@ const renderHeader = () => {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </button>
-        <nav class="primary-nav" id="primary-navigation" aria-label="Navigație principală">
+        <nav class="primary-nav desktop-nav" aria-label="Navigație principală desktop">
           ${createLink("/", "ACASĂ")}
           ${createLink("/despre-noi/", "DESPRE NOI")}
           <div class="info-menu">
@@ -40,11 +40,25 @@ const renderHeader = () => {
             <div class="info-menu__panel">${slujbe.map((page) => createLink(page.route, page.title)).join("")}</div>
           </div>
           <div class="info-menu">
-            ${createLink("/botez/", "INFORMAȚII")}
+            ${createLink("/donatii/", "INFORMAȚII")}
             <div class="info-menu__panel">${informatii.map((page) => createLink(page.route, page.title)).join("")}</div>
           </div>
           ${createLink("/contact/", "CONTACT")}
           ${createLink("/donatii/", "DONEAZĂ", "nav-donate")}
+        </nav>
+        <nav class="primary-nav mobile-nav" id="primary-navigation" aria-label="Navigație mobilă">
+          ${createLink("/", "ACASĂ")}
+          ${createLink("/despre-noi/", "DESPRE NOI")}
+          ${createLink("/program-liturgic/", "PROGRAM LITURGIC")}
+          ${createLink("/botez/", "BOTEZ")}
+          ${createLink("/spovedanie/", "SPOVEDANIE")}
+          ${createLink("/donatii/", "DONAȚII")}
+          ${createLink("/fundatia-noastra/", "FUNDAȚIA NOASTRĂ")}
+          ${createLink("/viata-sfintei-parascheva/", "VIAȚA SFINTEI PARASCHEVA")}
+          ${createLink("/acatistul-sfintei-parascheva/", "ACATISTUL SFINTEI PARASCHEVA")}
+          ${createLink("/parohii-olanda/", "PAROHII OLANDA")}
+          ${createLink("/parohii-belgia/", "PAROHII BELGIA")}
+          ${createLink("/contact/", "CONTACT")}
         </nav>
       </div>
     </header>
@@ -62,7 +76,7 @@ const renderFooter = () => `
         <h3>Linkuri utile</h3>
         <a href="/despre-noi/">Despre noi</a>
         <a href="/program-liturgic/">Slujbe</a>
-        <a href="/botez/">Informații</a>
+        <a href="/donatii/">Donații</a>
         <a href="/contact/">Contact</a>
       </nav>
       <nav aria-label="Urmărește parohia">
@@ -119,7 +133,7 @@ const enhanceExternalLinks = (root) => {
 
 const initMenu = () => {
   const navToggle = document.querySelector(".nav-toggle");
-  const primaryNav = document.querySelector(".primary-nav");
+  const primaryNav = document.querySelector("#primary-navigation");
   const dropdowns = Array.from(document.querySelectorAll(".info-menu"));
   let activeDropdown = null;
   let closeTimer = null;
@@ -187,7 +201,7 @@ const initMenu = () => {
   document.addEventListener("click", (event) => {
     if (
       primaryNav?.classList.contains("is-open") &&
-      !event.target.closest(".primary-nav") &&
+      !event.target.closest("#primary-navigation") &&
       !event.target.closest(".nav-toggle")
     ) {
       navToggle?.setAttribute("aria-expanded", "false");

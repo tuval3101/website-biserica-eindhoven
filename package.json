@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/generate-pages.mjs && node scripts/validate-site.mjs",
-    "lint": "node scripts/validate-site.mjs"
+    "build": "node scripts/generate-pages.mjs && node scripts/validate-site.mjs && node scripts/validate-links.mjs",
+    "lint": "node scripts/validate-site.mjs",
+    "validate:links": "node scripts/validate-links.mjs"
   }
 }

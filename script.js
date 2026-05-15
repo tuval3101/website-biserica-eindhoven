@@ -7,7 +7,7 @@ if (currentYear) {
 
 const initNavigation = () => {
   const navToggle = document.querySelector(".nav-toggle");
-  const primaryNav = document.querySelector(".primary-nav");
+  const primaryNav = document.querySelector("#primary-navigation");
   const dropdowns = Array.from(document.querySelectorAll(".info-menu"));
   let activeDropdown = null;
   let closeTimer = null;
@@ -76,7 +76,7 @@ const initNavigation = () => {
   document.addEventListener("click", (event) => {
     if (
       primaryNav?.classList.contains("is-open") &&
-      !event.target.closest(".primary-nav") &&
+      !event.target.closest("#primary-navigation") &&
       !event.target.closest(".nav-toggle")
     ) {
       navToggle?.setAttribute("aria-expanded", "false");
