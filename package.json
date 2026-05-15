@@ -1,0 +1,10 @@
+{
+  "name": "parohia-sf-parascheva-eindhoven-tilburg",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-pages.mjs && node scripts/validate-site.mjs",
+    "lint": "node scripts/validate-site.mjs"
+  }
+}
