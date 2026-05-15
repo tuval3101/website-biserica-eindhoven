@@ -68,6 +68,7 @@ const renderFooter = () => `
       <nav aria-label="Urmărește parohia">
         <h3>Urmărește</h3>
         <a href="${siteConfig.facebook}" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="footer-whatsapp-link" href="${siteConfig.whatsappGroup}" target="_blank" rel="noopener noreferrer" aria-label="Grup WhatsApp Parohie"><span class="footer-whatsapp-icon" aria-hidden="true">WA</span>Grup WhatsApp Parohie</a>
       </nav>
     </div>
     <div class="container footer__bottom">
@@ -78,14 +79,20 @@ const renderFooter = () => `
 
 const renderWhatsAppQrCard = () => `
   <article class="whatsapp-qr-card">
-    <h2>Intră în grupul WhatsApp</h2>
-    <p>Scanează codul QR pentru a te adăuga în grupul WhatsApp al parohiei și pentru a primi anunțuri, program liturgic și informații importante.</p>
+    <h2>Intră în grupul WhatsApp al Parohiei</h2>
+    <p>Primește anunțuri importante, program liturgic, evenimente și informații despre comunitatea Parohiei „Sf. Parascheva de la Iași” Eindhoven–Tilburg.</p>
     <figure class="whatsapp-qr-card__image">
-      <img src="/assets/images/spirituality/Grupwhatsapp.png" alt="Cod QR pentru grupul WhatsApp al Parohiei Sfânta Parascheva Eindhoven-Tilburg" loading="lazy" decoding="async">
+      <img src="/assets/images/spirituality/Grupwhatsapp.png" alt="Cod QR grup WhatsApp Parohia Sfânta Parascheva Eindhoven Tilburg" loading="lazy" decoding="async">
     </figure>
-    <p class="whatsapp-qr-card__subtext">Grupul este destinat anunțurilor comunității Parohiei „Sf. Parascheva de la Iași” Eindhoven–Tilburg.</p>
-    <!-- TODO: replace with real WhatsApp invite link when available -->
-    <a class="button button--whatsapp" href="#" target="_blank" rel="noopener noreferrer">Deschide WhatsApp</a>
+    <div class="whatsapp-qr-card__steps">
+      <p>Poți intra în grup:</p>
+      <ul>
+        <li>scanând codul QR</li>
+        <li>sau apăsând butonul de mai jos</li>
+      </ul>
+    </div>
+    <a class="button button--whatsapp" href="${siteConfig.whatsappGroup}" target="_blank" rel="noopener noreferrer">Intră în grupul WhatsApp</a>
+    <p class="whatsapp-qr-card__subtext">„Scanează codul QR sau apasă butonul pentru a intra direct în grup.”</p>
   </article>
 `;
 

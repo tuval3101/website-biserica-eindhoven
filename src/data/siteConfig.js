@@ -6,6 +6,7 @@ export const siteConfig = {
   phone: "+32 486265644",
   phoneHref: "tel:+32486265644",
   whatsapp: "https://wa.me/32486265644",
+  whatsappGroup: "https://chat.whatsapp.com/Ki23zxd8Z7eHMGHJWaKksx",
   facebook: "https://www.facebook.com/biserica4eindhoven",
   maps: "https://www.google.com/maps/search/?api=1&query=Willibrorduskerk%2C%20Sint%20Willibrordstraat%201%2C%205056%20HS%20Berkel-Enschot",
   donationName: "Stichting Romanian Orthodox Church Saint Parascheva",
