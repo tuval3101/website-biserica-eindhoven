@@ -1,4 +1,5 @@
 Donatii
+
 Cei care doresc sa sprijine financiar parohia Sfanta Parascheva din Eindhoven-Oirschot, pot face donatii in contul fundatiei non profit al parohiei.
 
 Lasati un pomelnic la descrierea platii si toti vor fi pomeniti la Sfintele Liturghii drept ctitori ai parohiei noastre.

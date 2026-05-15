@@ -1,4 +1,5 @@
 Acatistul Sfintei Parascheva
+
 Rugaciunile incepatoare acatistului Sfintei Parascheva :
 
 In numele Tatalui si al Fiului si al Sfantului Duh, Amin.

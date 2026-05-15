@@ -1,4 +1,5 @@
 Parohii Olanda
+
 Parohii ortodoxe romane Olanda
 Parohia Sfântul Ioan Gură de Aur - AMSTERDAM - AALSMEER
 Adresa: Oud-Katholieke Kerk din Aalsmeer, Oosteinderweg 394, 1432 BG Aalsmeer

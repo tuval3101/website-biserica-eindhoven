@@ -1,4 +1,5 @@
 Parohii Belgia
+
 Parohii ortodoxe romane Belgia
 Parohia “Naşterea Maicii Domnului” – Anvers
 Pr. Ioan Dură

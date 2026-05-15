@@ -1,5 +1,6 @@
 
 Fundatia Noastra
+
 Fundatia Romanian Orthodox Church Saint Parascheva (R.O.C.S.P)
 
 Nr RSIN: 854653569
