@@ -2,6 +2,7 @@ import { access, readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 import { pages } from "../src/data/pages.js";
+import { heroImages } from "../src/data/heroImages.js";
 
 const root = process.cwd();
 const failures = [];
@@ -31,13 +32,7 @@ const requiredAssets = [
   "/assets/images/spirituality/Program.png",
   "/assets/images/spirituality/Grupwhatsapp.png",
   "/assets/images/contact-location/St. Willibrord Church.png",
-  "/assets/images/hero/Parohie 1.png",
-  "/assets/images/hero/Parohie 2.png",
-  "/assets/images/hero/Parohie 3.png",
-  "/assets/images/hero/Parohie 4.png",
-  "/assets/images/hero/Parohie 5.png",
-  "/assets/images/hero/Parohie 6.png",
-  "/assets/images/hero/Parohie 7.png"
+  ...new Set(Object.values(heroImages).flat())
 ];
 
 for (const asset of requiredAssets) {
@@ -103,7 +98,7 @@ for (const file of htmlFiles) {
   }
 }
 
-for (const jsFile of ["script.js", "src/app.js", "src/markdown.js", "src/data/pages.js", "src/data/siteConfig.js"]) {
+for (const jsFile of ["script.js", "src/app.js", "src/markdown.js", "src/data/pages.js", "src/data/siteConfig.js", "src/data/heroImages.js"]) {
   const jsCheck = spawnSync("node", ["--check", jsFile], { cwd: root, encoding: "utf8" });
   if (jsCheck.status !== 0) {
     failures.push(jsCheck.stderr || jsCheck.stdout || `${jsFile} syntax check failed`);
